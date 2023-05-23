@@ -2,9 +2,9 @@ const iframe = document.querySelector('#ora-embed-frame');
 const switchPageBtn = document.querySelector('#switch-page-btn');
 switchPageBtn.addEventListener('click', () => {
     const currentSrc = iframe.src;
-    const newSrc = currentSrc === 'https://bing.techxiaofei.com' ? 'https://ora.ai/embed/c3fd84e7-f3de-4ea8-812b-25c9782834fd' : 'https://bing.techxiaofei.com/web/#/';
+    const newSrc = currentSrc === '' ? '' : '';
     iframe.src = newSrc; // 切换 iframe 的 src 属性
-    switchPageBtn.innerText = currentSrc === 'https://bing.techxiaofei.com/web/#/' ? 'Alice' : 'AI冰';
+    switchPageBtn.innerText = currentSrc === '' ? '' : '';
 });
 
 function toggleComment() {
