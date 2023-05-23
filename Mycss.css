@@ -1,0 +1,107 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, pink, #19E0E0);
+}
+
+body {
+    background-color: rgba(238, 197, 204, 0.91);
+}
+
+#ora-embed-frame {
+    border: 0;
+    border-radius: 4px;
+    background-color: #8DF7E7;
+    opacity: 0.9;
+    position: relative;
+    top: -50px;
+    width: 100%;
+}
+
+.centered{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    padding: 10px 20px;
+    background: linear-gradient(to right, #90c0f0, #f58eb3); /*蓝粉色渐变背景色*/
+    opacity: 0.6; /*设置透明度*/
+    border-radius: 37px; /*设置圆角*/
+    color: #fff; /* 设置字体颜色为白色 */
+    border: 0; /* 取消边框 */
+}
+
+#comment-section {
+    position: relative;
+    padding: 20px; /*设置与其他内容之间的间距*/
+}
+
+#toggle-button-wrap {
+    position: absolute; /*设置为绝对定位*/
+    left: 10px; /*与父容器右边缘的距离*/
+    top: 10px; /*与父容器上边缘的距离*/
+    z-index: 10; /*设置为比其他内容更高的层级*/
+}
+
+#toggle-button {
+    background: linear-gradient(to right, rgba(152, 152, 241, 0.78), #F6BEF6);
+    color: white;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-color: #C7F3EC;
+}
+
+#lv-container {
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgb(224, 159, 224);
+    overflow: hidden; /*隐藏评论区*/
+    max-height: 0; /*初始高度为0*/
+    transition: max-height 0.3s ease-out; /*设置过渡效果*/
+}
+
+#lv-container.show {
+    max-height: 500px; /*设置展开后的最大高度*/
+}
+
+#timer-tip {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom right, #19E0E0, rgba(255, 192, 203, 0.99));
+    opacity: 0.8;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 24px 32px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.timer-tip-text {
+    margin-bottom: 8px;
+}
+
+.timer-tip-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgba(22,141,225,0.5);
+    text-align:center;
+    border-radius: 10px;
+    animation-duration: 7.3s;
+    animation-name: fadeInUp;
+    color: rgba(248,174,187,0.99);
+    position: relative;
+    bottom: 0px;
+}
